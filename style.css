@@ -26,12 +26,11 @@ body{
    font-family:'Roboto', sans-serif;
 }
 
-main{
+/* main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
+} */
 
 p{
    color: white;
@@ -54,6 +53,7 @@ p{
    height: 40px;
    width: 150px;
    background-color: #DD0000;
+   font-size: 20px;
    color: white;
    padding: 2%;
    margin-right: 10px;
@@ -137,29 +137,40 @@ nav{
     grid-row-gap: 24px;
     margin-left: 12px;
  }
- .transfer-live{
+
+.box{
+   width: 312px;
+   height: 362px;
+   background-color: white;
+   border: 1px solid #E8E8E8;
+   border-radius: 10px;
+}
+
+/* .transfer-live{
     background-color: white;
     border: 1px solid #E8E8E8;
-    border-radius: 10px;
-    
- }
- .live-banner img{
+    border-radius: 10px;  
+} */
+
+.live-banner{
     width: 100%;
     
- }
- .live-detail{
-    padding: 6%;
- }
+}
+
+.live-detail{
+    padding: 10%;
+}
 
  .button-2{
-    height: 27px;
-    width: 80px;
+   width: 100px;
+    height: 32px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
  }
  .live-title{
     color: #161616;
+    font-size: 16px;
     font-family:'Roboto', sans-serif;;
  }
  .live-info{
@@ -186,7 +197,6 @@ nav{
    text-align: center;
    font-size: 16px;
    font-family: Raleway;
-   padding: 40px;
    background-color: #161616;
    color: white;
    
@@ -199,11 +209,15 @@ nav{
    
 }
 
- /*----------------
-   Responsive
- ----------------*/
+ /*-----------------------------------------------------
+                        Responsive
+ ------------------------------------------------------*/
 
  /* Small Device */
+ /* .content{
+   grid-template-columns: repeat(1, 1fr);
+} */
+
  @media screen and (max-width: 576px) {
    .container-2{
        flex-direction: column;
@@ -214,7 +228,7 @@ nav{
 
    .container-1{
        width: 85%;
-       height: 534.4px;
+       height: 0%;
        margin-top: 0%;
        margin-left: 7%;
        color: white;
@@ -224,13 +238,13 @@ nav{
    }
    .header-left h1{
        color: white;
-       font-size: 22px;
+       font-size: 1.5em;
        text-align: center;
        margin: 0 ;
    }
    p{
        color: white;
-       font-size: 14px;
+       font-size: 1em;
        text-align: center;
    }
    .button-1{
@@ -240,27 +254,27 @@ nav{
        color: white;
        padding: 2%;
        margin-top: 10px;
-       margin-right: 10px;
        border: none;
        border-radius: 5px;
+       
    }
+
+   nav{
+      text-align: center;
+   }
+
    .header-left{
        margin: 0% 15%;
        margin-top: 50px;
-       padding: 0%;
-   }
-   .header-right img{
-       margin-top: 0%;
-       width: 77.3%;
-       place-items: center;
+       /* position: relative; */
        
    }
+   .header-right img{
+      width: 65%;
+      /* place-items: center;  */
+   }
    
-
-
    /* Header Align End */
-
-
 
 
    /* Button Design Start*/
@@ -304,28 +318,22 @@ nav{
 
    /* Box Align Start */
    .box{
-       width: 85%;
-       height: 242px;
-       background-color: white;
-       border: 1px solid #E8E8E8;
-       border-radius: 10px;
+      width: 312px;
+      height: 362px;
+      background-color: white;
+      border: 1px solid #E8E8E8;
+      border-radius: 10px;
    }
    .content{
        place-items: center;
-       margin: 0;
    }
-   .transfer-live{
+   /* .transfer-live{
        width: 250px;
        height: 100px;
        align-items: center;
        margin: 45px 40px; 
-   }
+   } */
    /* Box Align End*/
-
-
-
-
-
 
 
 
@@ -344,10 +352,109 @@ nav{
    
 }
 
-/* medium device */
+                      /* medium device --------
+                      ------------------------------*/
 
-/* @media screen and (min-width: 577px) and (max-width: 700px) {
+@media screen and (min-width: 577px) and (max-width: 700px) {
            .content{
                grid-template-columns: repeat(2, 1fr);
+               margin-top: 20px;
            }
-       } */
+
+           .container-2{
+            flex-direction: column;
+            margin-top: 20px;
+        }
+         
+           .container-1{
+            width: 734px;
+            height: 398px;
+            margin-top: 0%;
+            /* margin-left: 7%; */
+            color: white;
+            display: grid;
+            /* grid-template-columns: repeat(1, 1fr); */
+        }
+
+        .header-left{
+         margin: 0% 15%;
+         margin-top: 50px;
+         padding: 0%;
+         } 
+
+        .header-left h1{
+         color: white;
+         font-size: 40px;
+         font-family:'Roboto', sans-serif;
+         }
+
+         .header-right img{
+            width: 80%;
+            /* place-items: center;  */
+         }
+
+      p{
+         color: white;
+         font-size: 14px;
+         font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      .button-1{
+         height: 40px;
+         width: 161px;
+         background-color: #DD0000;
+         color: white;
+         padding: 2%;
+         margin-top: 10px;
+         border: none;
+         border-radius: 5px;
+     }
+
+        /* Button Design Start*/
+   .menu .button-m{
+      background-color: rgb(255, 255, 255);
+      border: 1px solid blue;
+  }
+  .b1{
+      width: 210px;
+      height: 48px;
+      background-color: #ffffff;
+      color: #161616;
+      margin: 18px 0;
+      border: 1px solid #E8E8E8;
+      border-radius: 10px;
+      font-size: 16px;
+  }
+  .b2{
+      width: 160px;
+      height: 48px;
+      background-color: #ffffff;
+      color: #161616;
+      margin: 18px 0;
+      border: 1px solid #E8E8E8;
+      border-radius: 10px;
+      font-size: 16px;
+  }
+  .b3{
+      width: 160px;
+      height: 48px;
+      background-color: #DD0000;
+      color: white;
+      margin: 18px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+  }
+  .button-m{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 70px;
+  } 
+
+
+  /* Button End */
+
+       }
