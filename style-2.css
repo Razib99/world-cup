@@ -5,30 +5,22 @@
 body{
     max-width: 1321px;
     margin: 0 auto;
-    border: 1px solid blue;
-    /* display: flex; */
     flex-direction: column;
-    /* align-items: center; */
 }
 /* Common Style */
 .header-left h1{
     color: white;
-    font-size: 70px;
+    font-size: min(5vw, 70px);
     margin: 0 ;
     font-family:'Roboto', sans-serif;
-}
+ }
 
-p{
+ p{
     color: white;
-    font-size: 16px;
+    font-size: min(1.1vw, 18px);
     font-family: 'Source Sans Pro', sans-serif;
-}
-/* main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-} */
+ }
+
 .container-1{
     background-color: #161616;
     width: 100%;
@@ -38,7 +30,7 @@ p{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 24px;
-    /* justify-content: center; */
+
 }
 
 /* Link Button */
@@ -54,16 +46,20 @@ p{
     border-radius: 5px;
 }
 nav{
-    position: relative;
+    margin-left: -40px;
 }
 .header-left{
     margin: 9%;
     padding: 5%;
 }
+.header-right{
+    width: 80%;
+    margin-top: 2em;
+    margin-bottom: 2px;
+}
+
 .header-right img{
-    width: 76.3%;
-    margin-left: 20%;
-    margin-top: 6.5%;
+    width: 100%;
 }
 
 /*----------------
@@ -117,8 +113,6 @@ nav{
 
  .container-2{
     display: flex;
-    /* flex-direction: row;
-    justify-content: center; */
     width: 100%;
     margin-top: 100px;
 }
@@ -148,19 +142,12 @@ nav{
 .live-banner {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .live-detail{
     padding: 6%;
 }
- /* .button-2{
-    height: 27px;
-    width: 80px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
- } */
+
  .live-title{
     color: #161616;
     text-align: center;
@@ -181,31 +168,73 @@ nav{
     margin-right: 10px;
  }
 
-/*----------------
-   Footer
- ----------------*/
+ /*-----------------------------------------------------
+                        Footer
+ ------------------------------------------------------*/
  .footer {
-    justify-content: center;
     width: 100%;
-    height: 244px;
-    text-align: center;
-    font-size: 16px;
-    font-family: Raleway;
+    height: 100%;
+    padding-bottom: 10%;
     background-color: #161616;
-    color: white;
-    
+    color: white;  
  }
+ 
+ .footer-h2{
+    padding-top: 10%;
+    text-align: center;
+    font-size: 40px;
+    font-family: Raleway;
+ }
+ 
  .footer-content{
     display: flex;
-    align-items: center;
-    margin: 10px 50%;
-    width: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+ 
+ 
+ .line-1 {
+    width: 80%;
+    height: 1px;
+    margin: auto;
+    background: #ffffff20;
     
+  }
+ 
+ .social-media{
+    display: flex;
+    margin-top: 5%;
+    padding-left: 40%;
+    padding-right: 40%;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+ .fa-facebook-f{
+    color: white;
+ }
+ .fa-twitter{
+    color: white;
+ }
+ .fa-linkedin-in{
+    color: white;
+ }
+ .fa-at{
+    color: white;
  }
 
- /*----------------
-   Responsive
- ----------------*/
+ /*-----------------------------------------------------
+                        Responsive
+ ------------------------------------------------------*/
+
+ /*-----------------------------------------------------
+                        Small Device
+ ------------------------------------------------------*/
 
  /* Small Device */
  @media screen and (max-width: 576px) {
@@ -218,46 +247,57 @@ nav{
 
     .container-1{
         width: 85%;
-        height: 534.4px;
+        height: 0%;
         margin-top: 0%;
         margin-left: 7%;
         color: white;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-
+ 
     }
     .header-left h1{
         color: white;
-        font-size: 1.5em;
+        font-size: 7vw;
         text-align: center;
-        margin: 0 ;
+        /* margin: 0 ; */
     }
     p{
         color: white;
-        font-size: 1em;
+        font-size: 3.5vw;
         text-align: center;
     }
     .button-1{
         height: 40px;
-       width: 161px;
-       background-color: #DD0000;
-       color: white;
-       padding: 2%;
-       margin-top: 10px;
-       border: none;
-       border-radius: 5px;
-    }
-    .header-left{
-        margin: 0% 15%;
-        margin-top: 50px;
-        padding: 0%;
-    }
-    .header-right img{
-        width: 77.3%;
-        place-items: center;
+        width: 161px;
+        background-color: #DD0000;
+        color: white;
+        padding: 2%;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
         
     }
-    
+    nav{
+        text-align: center;
+     }
+  
+     .header-left{
+         margin: 0% 10%;
+         margin-top: 20px;
+         
+     }
+  
+     .header-right{
+        width: 100%;
+        margin-top: 0;
+     }
+  
+     .header-right img{
+        width: 88%;
+        place-items: center; 
+        margin-left: 10%;
+       
+     }
 
 
     /* Header Align End */
@@ -301,20 +341,29 @@ nav{
     }
     .button-m{
         width: 100%;
+        height: 255px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     } 
     /* Button End */
 
-    /* Box Align Start */
+
+    /*----------------
+      Transfer Live
+    ----------------*/
     .box{
-        width: 85%;
-        height: 242px;
+        width: 100%;
+        height: 100%;
         background-color: white;
         border: 1px solid #E8E8E8;
         border-radius: 10px;
-    }
-    .content{
-        place-items: center;
-    }
+     }
+     .content{
+         place-items: center;
+         margin-left: 10%;
+         margin-right: 10%;
+     }
     .transfer-live{
         width: 250px;
         height: 100px;
@@ -327,22 +376,190 @@ nav{
     .content{
         grid-template-columns: repeat(1, 1fr);
     }
-    /* .button-m{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
+
+     /* Footer */
+   .footer{
+    width: 100%;
+    height: 100%;
+    background-color: #161616;
+    color: white;
+    padding-bottom: 5%;  
+   }
+
+    .footer-content{
+    display: flex;
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    }
+    .social-media{
+    margin-top: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+    }
     
 }
+ /*-----------------------------------------------------
+                        Medium Device
+ ------------------------------------------------------*/
 
-/* medium device */
+ @media screen and (min-width: 577px) and (max-width: 864px) {
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
- /* @media screen and (min-width: 577px) and (max-width: 700px) {
-            .content{
-                grid-template-columns: repeat(2, 1fr);
-            }
-        } */
+    .container-2{
+     flex-direction: column;
+     margin-top: 20px;
+ }
+  
+    .container-1{
+     width: 90%;
+     height: 0%;
+     margin-top: 30px;
+     margin-left: 5%;
+     margin-right: 5%;
+     color: white;
+     display: grid;
+     align-self: center;
+     justify-self: center;
+ }
 
-    
- 
+ .header-left{
+  
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 50px;
+  margin-right: 20px;
+  padding: 0px;
+  } 
 
+ .header-left h1{
+  color: white;
+  font-size: 40px;
+  font-family:'Roboto', sans-serif;
+  }
+
+  .header-right{
+     width: 100%;
+     margin-top: 5%;
+  }
+
+  .header-right img{
+     height: auto;
+     width: 88%;
+     margin-left: 5%;  
+  }
+
+  .header-left h1{
+     color: white;
+     font-size: min(4.5vw, 40px);
+     margin: 0 ;
+     font-family:'Roboto', sans-serif;
+  }
+
+p{
+  color: white;
+  font-size: min(1.5vw, 16px);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.button-1{
+  height: 40px;
+  width: 161px;
+  background-color: #DD0000;
+  color: white;
+  padding: 2%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+ /* Button Design Start*/
+.menu .button-m{
+background-color: rgb(255, 255, 255);
+border: 1px solid blue;
+}
+.b1{
+width: 210px;
+height: 48px;
+background-color: #ffffff;
+color: #161616;
+margin: 18px 0;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+font-size: 16px;
+}
+.b2{
+width: 160px;
+height: 48px;
+background-color: #ffffff;
+color: #161616;
+margin: 18px 0;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+font-size: 16px;
+}
+.b3{
+width: 160px;
+height: 48px;
+background-color: #DD0000;
+color: white;
+margin: 18px 0;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+}
+.button-m{
+display: flex;
+align-items: center;
+flex-direction: row;
+margin-left: 5%;
+justify-content: space-between;
+width: 90%;
+height: 70px;
+border-radius: 10px;
+background-color: #161616;
+} 
+
+/* Button End */
+
+/*----------------
+Transfer Live
+----------------*/
+
+.box{
+width: 100%;
+height: 100%;
+background-color: white;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+}
+
+.live-banner img{
+width: 100%; 
+}
+
+
+
+/*----------------
+ Footer
+----------------*/
+
+
+.footer {
+width: 100%;
+height: 330px;
+background-color: #161616;
+color: white;  
+}
+}
